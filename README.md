@@ -25,6 +25,7 @@ This API is statically generated and statistics like download counts will only u
 | downloads  | number   | The amount of downloads the project has received on CurseForge.          |
 | members    | string[] | Usernames of the authors on CurseForge.                                  |
 | loaders    | string[] | A list of supported mod loaders. Old projects may not have defined this. |
+| versions   | string[] | A list of supported Minecraft versions.                                  |
 
 #### StatsJson
 | Property     | Type   | Description                                     |
