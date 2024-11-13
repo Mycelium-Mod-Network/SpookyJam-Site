@@ -1,5 +1,6 @@
 export const PROJECT_CACHE: Map<number, Promise<Submission>> = new Map()
 const delay = (ms = 1) => new Promise(r => setTimeout(r, ms));
+
 const nameOverrides: Map<number, string> = new Map();
 nameOverrides.set(920504, 'Cannibal Conundrum')
 nameOverrides.set(538660, 'Phasmophobia')
@@ -65,14 +66,19 @@ async function fetchRecursive(projectId: number): Promise<Submission> {
 const validLoaderTags = ['Fabric', 'Forge', 'NeoForge', 'Quilt']
 function fromProject(project: ProjectData): Submission {
     const loaderTags: Set<string> = new Set()
+    const versions: Set<string> = new Set()
     project.files.forEach(file => {
         validLoaderTags.forEach(tag => {
             if (file.versions.includes(tag)) {
                 loaderTags.add(tag)
             }
         })
+        file.versions.forEach(version => {
+            if (version.startsWith("1.") && !version.endsWith("-Snapshot")) {
+                versions.add(version);
+            }
+        })
     })
-    console.log(loaderTags.size)
 
     return {
         id: project.id,
@@ -83,7 +89,8 @@ function fromProject(project: ProjectData): Submission {
         created_at: project.created_at,
         downloads: project.downloads.total,
         members: project.members.map(m => m.username),
-        loaders: Array.from(loaderTags)
+        loaders: Array.from(loaderTags),
+        versions: Array.from(versions)
     }
 }
 
@@ -97,6 +104,7 @@ export interface Submission {
     downloads: number
     members: string[]
     loaders: string[]
+    versions: string[]
 }
 
 export interface ProjectData {

@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/main.astro";
+import {fetchMods} from "../util/curseforge.js";
+import {SUBMISSIONS} from "../config.js";
+import {Submission} from "../util/curseforge";
+import {compareVersions} from "compare-versions";
+
+const submissionIds = [] as number[];
+for (const year of SUBMISSIONS.keys()) {
+    submissionIds.push(...(SUBMISSIONS.get(year) ?? []));
+}
+
+const submissions = await fetchMods(submissionIds)
+submissions.sort((a, b) => a.title.localeCompare(b.title));
+
+const versions: Map<string, Set<Submission>> = new Map();
+submissions.forEach(submission => {
+    submission.versions.forEach(version => {
+        const projects = versions.get(version) ?? new Set();
+        projects.add(submission);
+        versions.set(version, projects);
+    })
+})
+
+let mostSupported = "1.21.1";
+Array.from(versions.keys()).forEach(version => {
+    if (versions.get(version).size > versions.get(mostSupported).size) {
+        mostSupported = version;
+    }
+})
+---
+
+<Layout title="Submissions by Version" description="A list of SpookyJam submissions sorted by versions they support.">
+    <p>
+        This page lists the SpookyJam submissions available for each version of Minecraft. The most supported version is
+        Minecraft {mostSupported}, with {versions.get(mostSupported).size} available submissions! This page was last
+        updated on {new Date().toLocaleString("en-GB", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.
+    </p>
+    {
+        Array.from(versions.keys()).sort(compareVersions).reverse().map(version => (
+            <h2>{version} ({versions.get(version).size})</h2>
+            <ul>
+                {
+                    Array.from(versions.get(version)).map(submission => (
+                            <li><a href={submission.url} target="_blank" rel="noopener noreferrer">{submission.title}</a></li>))
+                }
+            </ul>
+        ))
+    }
+</Layout>
