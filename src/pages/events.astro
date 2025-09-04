@@ -6,16 +6,16 @@ import Timer from "../components/Timer.astro";
 ---
 
 <Layout title="Events" description="A list of all past and current SpookyJam events!">
-    <h2 id="current-events">Current Events</h2>
-    <div class="mb-6 sm:mb-12 p-2 w-full">
-        <div class="grid grids-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-x-6 mt-6">
-            <PreviousEventCard event="2024" left="Who could" center="it be" right="now?"/>
+    <div class="flex items-center justify-center w-full mt-16">
+        <div class="w-3/4">
+            <PreviousEventCard event="2025" left="Who" center="Was" right="Phone" title={false}/>
         </div>
     </div>
 
     <h2 id="past-events">Past Events</h2>
     <div class="mb-6 sm:mb-12 p-2 w-full">
-        <div class="grid grids-cols-2 lg:grid-cols-3 gap-y-5 sm:gap-x-6 mt-6">
+        <div class="grid grids-cols-2 lg:grid-cols-2 gap-y-5 sm:gap-x-6 mt-6">
+            <PreviousEventCard event="2024" left="Pumpkin Pastures" center="Echoes" right="LUMINOUS: HALLOWEEN"/>
             <PreviousEventCard event="2023" left="Evoodooers" center="Cannibal Conundrum" right="Pumpkin Pal"/>
             <PreviousEventCard event="2022" left="Gardens of the Dead" center="Bone Zone" right = "Broglis Owls"/>
             <PreviousEventCard event="2021" left="Aylyth" center="Deep In The Night" right = "Haunted Harvest"/>
