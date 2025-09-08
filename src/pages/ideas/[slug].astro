@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/main.astro";
+import {IDEAS} from "../../config.js";
+import RandomizeButton from "../../components/RandomizeButton.astro"
+
+export function getStaticPaths() {
+    return Array.from(IDEAS.keys()).map(key => ({params: {slug: key}}))
+}
+const {slug} = Astro.params;
+const idea = IDEAS.get(slug)
+---
+
+<Layout title={`Idea: ${idea.title}`} description={idea.summary}>
+    <p>
+        {idea.summary}
+    </p>
+    <p class="text-sm mt-8">
+        This idea was suggested by <strong>{idea.suggester}</strong>!
+    </p>
+
+    <RandomizeButton id="random-idea" label="next idea" current={idea.slug}, paths={Array.from(IDEAS.keys())}/>
+</Layout>

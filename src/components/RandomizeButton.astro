@@ -1,0 +1,22 @@
+---
+export interface Props {
+    id: string,
+    label: string,
+    current: string,
+    paths: string[]
+}
+
+const { id, label, current, paths} = Astro.props
+---
+
+<button class={id}>{label}</button>
+
+<script client:load define:vars={{id, current, paths}}>
+    document.querySelectorAll("button." + id).forEach((button) => button.addEventListener('click', () => {
+        let path = paths[Math.floor(Math.random() * paths.length)]
+        while (path === current) {
+            path = paths[Math.floor(Math.random() * paths.length)]
+        }
+        window.location.href = `./${path}`
+    }))
+</script>

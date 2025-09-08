@@ -1,0 +1,399 @@
+{
+  "ideas": [
+    {
+      "title": "Eerie Footprints",
+      "summary": "An invisible entity that leaves muddy or bloody footprints behind.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Graveyard Structure",
+      "summary": "Graveyard or cemetery structures. Disturbing a grave may cause the undead to rise up and attack the player.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Moths",
+      "summary": "Moth mobs that fly around at night. They are attracted to lanterns and may extinguish them. Comes in a variety of colors and designs.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Phantom Tools & Armor",
+      "summary": "Possessed armor or tools that come to life and attack the player.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Bone Piles",
+      "summary": "Piles of bones that can reassemble into a skeleton when a player gets near.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Scarecrow",
+      "summary": "Scarecrow that boosts nearby crop growth. Maybe they come to life if they are struck with lightning.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Cursed Bookshelves",
+      "summary": "A bookshelf block that sometimes play creepy whispering sound effects, as if the books are speaking to the player.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Wolf Creatures",
+      "summary": "Different types of wolves based on legends like Black Shuck, Hellhounds, skeletal dogs, etc.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Scraps of Lore",
+      "summary": "Scraps of paper or old books with lore and ghost stories written in them.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Screenshot Entity",
+      "summary": "An unsettling entity that is invisible to the player but can be seen in screenshots.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Invisible Ink",
+      "summary": "Invisible ink for signs. The text is only visible if you use or hold a certain item.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Cursed Compass",
+      "summary": "A cursed compass that leads you towards the nearest hostile mob instead of spawn. Could be put in loot and players would not know it's a different item.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Motion Entity",
+      "summary": "An unsettling entity that players can only see while they are standing still.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Possessed Book",
+      "summary": "A book that slowly writes new pages on its own. Things like creepy messages, reference things the player did, or give them coordinates or advice to lure them somewhere.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Tree Tapping",
+      "summary": "A tree tap block that allows players to collect various types of saps and syrups like maple syrup.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Smores",
+      "summary": "A campfire cooking recipe for making classic smores.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Mushroom Rain Boost",
+      "summary": "Make mushrooms grow after it rains. This could be making mushrooms spread when it rains, or adding new types of mushrooms that only appear after a rainfall.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Fall Decorations",
+      "summary": "Decorations that fit with the fall aesthetic, like harvest baskets, scarecrows, and acorns",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Ghost Structures",
+      "summary": "A structure that completely disappears when the player leaves",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Faceless villagers",
+      "summary": "Villagers that have no face. This could be a temporary unsettling thing, permanent, or maybe entire villages of faceless villagers.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Ocean Shadows",
+      "summary": "Massive shadows under the surface of the water to create the illusion that something is down there.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Angler Fish",
+      "summary": "A mob inspired by the angler fish that lures players into the depths of the ocean.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Ghost Ships",
+      "summary": "Abandoned ship structures that can be found in the ocean. Maybe they have ghost pirates or similar creepy mobs.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Face Collector",
+      "summary": "An unsettling entity or mini-boss that collects the faces/skins of players it has killed.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Navigation Disruption",
+      "summary": "A mob that makes navigation items fail. Compasses point at it instead of spawn, clocks show the wrong time, and maps display fake markers.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Grinning Mobs",
+      "summary": "Humanoid mobs like players or villagers that have unnaturally big smiles.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Bermuda Triangle Biome",
+      "summary": "An ocean biome with thick fog, weird lights, and subtle effects that disrupt navigations like turning boats slightly off course.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Cute Witchcraft",
+      "summary": "A witchcraft mod that focuses on the cute aesthetic rather than the dark and morbid stuff. Stuff like Kiki's Delivery Service, cute animal mages, cozy cottage core witches.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Potion Minigame",
+      "summary": "A new brewing system with a puzzle based minigame.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Friendly Ghosts",
+      "summary": "Friendly ghosts that help the player out, kind of like the Allay. They could scare off raiders, help find items, or help you fly temporarily.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Witch Familiars",
+      "summary": "Different kinds of familiars that players can collect. Each one gives the player a different buff.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Potion Expansion",
+      "summary": "A wide range of new potion materials and new types of potions. Lots of interesting and niche potion ideas.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Candy",
+      "summary": "New types of candy items. Bonus points for original and creative designs.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Enchanted Postcards",
+      "summary": "Enchanted postcards that let the recipient teleport to the location it was taken.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Green Rain",
+      "summary": "Unsettling green rain that makes plants grow faster, maybe mutating them. Based on the green rain in Stardew Valley.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Ambient Birds",
+      "summary": "Spooky birds that add ambient cawing to the world. Maybe they go after crops or can be tamed.",
+      "suggester": "Nigel, Darkhax"
+    },
+    {
+      "title": "Nether Portal Spread",
+      "summary": "Nether portals slowly spread corruption into the real world and need to be contained.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Face Changer",
+      "summary": "A hostile mob that changes facial expressions each time you look away from it.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Spider Lairs",
+      "summary": "A spider lair full of egg sacs, mobs encased in webs, and a giant spider boss.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Fairy Circles",
+      "summary": "Rings of mushrooms that grow in the forest. Stepping in one may teleport you away.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Moth People",
+      "summary": "Small humanoids with visual elements inspired by moths. They could be like villagers or piglins and trade with you.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Creepy Fog Event",
+      "summary": "A heavy fog weather event that causes weird sounds to play, and new types of hostile mobs to show up. Like in The Mist.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Cursed Light Sources",
+      "summary": "Light sources like lanterns and torches that attract hostile mobs and cause them to spawn more instead of repelling them.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Scarecrow Mob",
+      "summary": "A scarecrow inspired mob that moves during night and turns into a block during the day.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Ancient Crypts",
+      "summary": "Giant crypt structure that generates under ground.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Monster Repellent",
+      "summary": "Tools and equipment for detecting, preventing, and containing spooky things.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Dark Deals",
+      "summary": "A villager that offers valuable items in exchange for lowering the players maximum hp.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Blood Moon",
+      "summary": "A rare blood-moon event that makes mobs stronger and drop more items. Some mobs may only spawn during this.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Candle Magic",
+      "summary": "Candle based magic. Things like summon mobs, give buffs, or reveal nearby invisible mobs.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Abandoned Structures",
+      "summary": "Abandoned structures, like run down theme parks or empty villages.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Repeating Staircase",
+      "summary": "A mysterious staircase or structure that teleports the player to appear infinite.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Pumpkin Golems",
+      "summary": "Different kinds of golems that wear pumpkins on their heads.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Pumpkin Boss",
+      "summary": "A giant pumpkin boss with vine tentacles that lash at players and push them away.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Bio-Tech",
+      "summary": "A tech mod that uses flesh, organs, and body parts, instead of machinery. For example, a crusher that uses teeth and hearts that pump fluids.",
+      "suggester": "Darkhax"
+    },
+    {
+      "title": "Ghostly Mobs",
+      "summary": "Ghosts, wraiths, and spectres! Souls of the dead that roam the lands. Maybe they can give the frightened debuff, preventing you from using items or attacking temporarily.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Zombie Tropes",
+      "summary": "Various types of zombies, pulling inspiration from common zombie tropes. Like Crawlers which are fast, explosive zombies, etc.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Skeleton Lumberjack",
+      "summary": "Skeleton Lumberjack who lurk in the forrest. They come in an assortment of colors, and have a special axe that can fell trees quicker or use less durability on logs.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Headless Mobs",
+      "summary": "Headless mobs, like the headless horseman who has a pumpkin in place of their head.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Poltergeists",
+      "summary": "Dark spirits that lurk in caves and attack by levitating nearby blocks and objects and tossing them at the player.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Vampires",
+      "summary": "Vampires, bat-winged creatures who hunt at night and hate the daylight. Would heal from attacking and can use a sonic wave attack like the warden.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Mummies",
+      "summary": "Mummies, bandaged undead mobs that roam sandy biomes at night. Maybe they can stretch their arms or release toxic clouds. Lighting them on fire could turn them into vanilla husks.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Turkeys",
+      "summary": "Add turkeys as an ambient mob to forests.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Rats",
+      "summary": "Rats and vermin that eat your crops and lurk in dark areas. Maybe include mouse traps to deal with them.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Night Birds",
+      "summary": "Peaceful night birds like owls that make hooting sounds.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Pumpkin Creatures",
+      "summary": "Pumpkin creatures like Jack O' Lantern mimics, crawling pumpkin spiders, and maybe even actual pumpkin people who have a secret society and want you specifically to be deceased?",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Wisps",
+      "summary": "Ghostly flames called wisps that drift through forested biomes at night. Maybe they come in different colors that do different things inspired by coices of the void.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Living Armor",
+      "summary": "Living suits of armor that stay still at day and move after dark. Maybe they are part of a new structure or use a new type of weapon like spears.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Tric-or-Treaters",
+      "summary": "Trick-or-treaters, humanoid creatures dressed in costumes. Bring them candy or sweets for a reward. Maybe there is also a trick variant that tries to harm you, or play a trick on you.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Abandoned Farmhouse",
+      "summary": "Old farmhouse structure with barns, ruined crops, scarecrows, and fall themed crops like gourds or corn.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Undead Structures",
+      "summary": "Graveyards, crypts, catacombs, and similar structures with grave robbing potential. Maybe undead skulk through at night.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Gothic Castles",
+      "summary": "Large gothic castles or haunted medieval fortresses, maybe they are strongholds for mobs like vampires.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Abandoned Campfires",
+      "summary": "Campfires with log seats, tents, and maybe other camping items. The campsite is abandoned and it looks like they left in a hurry.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Haunted Mansions",
+      "summary": "A haunted mansion filled with ghosts, deathtraps, and puzzles!",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Creepy Decorations",
+      "summary": "Creepy decorations like broken mirrors, creepy paintings, mannequins, worn down furniture, dolls, torture devices, placeable blood splatters, placeable books, bones, eerie statues, webs.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Pumpkin Moon Event",
+      "summary": "A recreation of the pumpkin moon event from terraria.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Spooky Candy",
+      "summary": "Gather weird or spooky ingredients to make your own candy at a confection station.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Ancient Hellhound Boss",
+      "summary": "A mini-boss inspired by the Ancient Hellhound from Ultima Online.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Yokai",
+      "summary": "A mod inspired by Japanese yokai like the Karakasa, a one-eyed hopping umbrella monster.",
+      "suggester": "Nigel"
+    },
+    {
+      "title": "Spooky Cosmetics",
+      "summary": "A bunch of hats and cosmetics that can be used as halloween costumes. Maybe there is a special merchant who sells costumes or a goodie bag that can be found in chests.",
+      "suggester": "Nigel"
+    }
+  ]
+}
