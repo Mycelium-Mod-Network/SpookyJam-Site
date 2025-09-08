@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # Idea Stuff
 .idea/
+
+# Astro
+.astro/
