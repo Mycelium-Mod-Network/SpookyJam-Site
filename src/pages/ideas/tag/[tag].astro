@@ -1,0 +1,21 @@
+---
+import Layout from "../../../layouts/main.astro";
+import {IDEA_TAGS} from "../../../config.js";
+import Idea from "../../../components/Idea.astro";
+
+export function getStaticPaths() {
+    return Array.from(IDEA_TAGS.keys()).map(key => ({params: {tag: key}}))
+}
+const {tag} = Astro.params;
+---
+
+<Layout title={`Tag: ${tag} (${IDEA_TAGS.get(tag).length})`} description={`All ideas from the ${tag} tag.`}>
+    <p>
+        The following is a list of all ideas in the {tag} tag.
+    </p>
+    <div class="lg:grid lg:grid-cols-3 lg:gap-2 mt-8">
+        {
+            IDEA_TAGS.get(tag).map(idea => <Idea slug={idea.slug} title={idea.title} summary={idea.summary} suggester={idea.suggester}/>)
+        }
+    </div>
+</Layout>

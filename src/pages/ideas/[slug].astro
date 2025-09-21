@@ -2,21 +2,33 @@
 import Layout from "../../layouts/main.astro";
 import {IDEAS} from "../../config.js";
 import RandomizeButton from "../../components/RandomizeButton.astro"
+import {renderMarkdown, capitalize} from "../../util/text";
 
 export function getStaticPaths() {
     return Array.from(IDEAS.keys()).map(key => ({params: {slug: key}}))
 }
 const {slug} = Astro.params;
 const idea = IDEAS.get(slug)
+const bodyText = await renderMarkdown(idea.body)
 ---
 
 <Layout title={`Idea: ${idea.title}`} description={idea.summary}>
-    <p>
-        {idea.summary}
-    </p>
+    <Fragment set:html={bodyText}/>
     <p class="text-sm mt-8">
         This idea was suggested by <strong>{idea.suggester}</strong>!
     </p>
-
-    <RandomizeButton id="random-idea" label="next idea" current={idea.slug}, paths={Array.from(IDEAS.keys())}/>
+    <div class="flex">
+        {
+            idea.tags.map((idea) =>
+                    <div>
+                        <a class="text-white" href={`/ideas/tag/${idea}`}>
+                            <p class="mr-2 px-1 text-sm border-2 rounded-lg border-yellow-800 bg-yellow-900 bg-opacity-75 hover:text-yellow-600 hover:bg-opacity-50">{capitalize(idea)}</p>
+                        </a>
+                    </div>
+            )
+        }
+    </div>
+    <div class="grid place-content-center mt-20">
+        <RandomizeButton id="random-idea" label="Another Idea!" current={idea.slug} paths={Array.from(IDEAS.keys())}/>
+    </div>
 </Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/main.astro";
+import {IDEA_TAGS} from "../../config.js";
+
+const sortedTags = [...IDEA_TAGS.entries()].sort((a, b) => b[1].length - a[1].length)
+---
+
+<Layout title={`Idea Tags`} description={`An index of all ideas sorted by their tags.`}>
+    <p>
+        The following list shows all ideas categorized by their tags. This can help you find ideas for specific types of
+        mobs and filter out stuff you are not interested in.
+    </p>
+    <ul>
+        {
+            sortedTags.map(([tag, ideas]) => {
+                return <li><a href={`./${tag}`}>{tag} ({ideas.length})</a></li>
+            })
+        }
+    </ul>
+</Layout>
