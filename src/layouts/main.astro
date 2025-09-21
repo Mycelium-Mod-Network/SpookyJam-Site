@@ -3,31 +3,30 @@ import SEO from "../components/Metadata.astro";
 import Navbar from "../components/Navbar.astro";
 
 export interface Props {
-	title: string;
-	description: string;
-	image: string;
+    title: string;
+    description: string;
+    image: string;
+    displayTitle: boolean;
 }
 
-const { title, description, image = 'ghost_logo.png'} = Astro.props;
+const {title, description, image = 'ghost_logo.png', displayTitle = true} = Astro.props;
 ---
 
 <html class="bg-[#1F1F1F] spooky" lang="en">
-	<head>
-		<SEO title={title} description={description} image={image} />
-	</head>
+<head>
+    <SEO title={title} description={description} image={image}/>
+</head>
 
-	<header>
-		<Navbar />
-	</header>
+<header>
+    <Navbar/>
+</header>
 
-	<main class="flex-grow flex justify-center">
-		<div class="w-[96%] xl:w-1/2 mt-2 xl:mt-12">
-			<div
-				class="xl:py-8 xl:px-12 p-4 bg-gray-800 text-gray-200 text-lg xl:text-xl rounded-2xl"
-			>
-				<h1 class="title">{title}</h1>
-				<slot />
-			</div>
-		</div>
-	</main>
+<main class="flex-grow flex justify-center">
+    <div class="w-[96%] xl:w-1/2 mt-2 xl:mt-12">
+        <div class="xl:py-8 xl:px-12 p-4 bg-gray-800 text-gray-200 text-lg xl:text-xl rounded-2xl">
+            {displayTitle && <h1 class="title">{title}</h1>}
+            <slot/>
+        </div>
+    </div>
+</main>
 </html>
