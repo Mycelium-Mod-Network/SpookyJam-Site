@@ -27,6 +27,10 @@ function shuffle(array) {
         <RandomizeButton id="random-idea" label="🎃Im Feeling Spooky👻" paths={Array.from(IDEAS.keys())}/>
     </div>
 
+    <p class="text-center">
+        Have an idea you would like to see added to our list? You can submit it <a href="https://forms.gle/7hYbftFkagRP9kzC9" target="_blank" rel="noopener">here</a>!
+    </p>
+
     <div class="lg:grid lg:grid-cols-3 lg:gap-2 mt-8">
         {
             ideas.map(idea => <Idea slug={idea.slug} title={idea.title} summary={idea.summary} suggester={idea.suggester}/>)
