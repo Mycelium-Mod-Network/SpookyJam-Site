@@ -4,9 +4,10 @@ import AuthorLink from "./AuthorLink.astro";
 
 export interface Props {
     project: Submission;
+    shouldTrim: boolean
 }
 
-const { project, ...props } = Astro.props as Props;
+const { project, shouldTrim = true, ...props } = Astro.props as Props;
 
 function truncate(str: string, max = 100): string {
     return str.length > max ? `${str.substring(0, max)}...` : str;
@@ -45,7 +46,7 @@ function truncate(str: string, max = 100): string {
         </p>
 
         <p class="text-base my-0">
-            {truncate(project.summary)}
+            {shouldTrim ? truncate(project.summary) : project.summary}
         </p>
     </div>
 </div>
