@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/main.astro";
+import {fetchMods} from "../util/curseforge.js";
+import {MODPACK_IDS} from "../config.js";
+import ModCard from "../components/ModCard.astro";
+
+const submissionIds = MODPACK_IDS
+
+const submissions = await fetchMods(submissionIds)
+submissions.sort((a, b) => new Date(b.created_at).valueOf() - new Date(a.created_at).valueOf());
+---
+
+<Layout title="Modpacks" description="A list of every SpookyJam modpack!">
+    <p>
+        Over the years, SpookyJam has brought together the community to create some truly memorable modpacks. Each one
+        captures a different slice of creativity! Each pack offers strange worlds to explore, eerie creatures, and
+        plenty of seasonal spirit. If you're curious about the history of the event or just want to revisit the past you
+        can explore them all here.
+    </p>
+    <div class="my-12">
+        {submissions.map((project) => (
+                <div class="mx-auto my-4 lg:w-5/6">
+                    <ModCard project={project} shouldTrim={false}/>
+                </div>
+        ))}
+    </div>
+</Layout>
