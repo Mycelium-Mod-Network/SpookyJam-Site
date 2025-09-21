@@ -2,29 +2,45 @@
 import Layout from "../layouts/main.astro";
 import {DISCORD} from "../config";
 import Timer from "../components/Timer.astro";
+import SimpleCard from "../components/SimpleCard.astro"
 ---
 
-<Layout title="SpookyJam" description="The official home of the annual SpookyJam mod jam!">
-
-    <p>
-        SpookyJam is an annual Minecraft mod jam held in celebration of the fall season. Each fall we invite modders of
-        all skill levels to join us in creating mods that are spooky, mysterious, or fit with the autumn vibes. Our goal
-        is to foster a sense of community while encouraging modders to push their creative boundaries and refine their
-        craft.
+<Layout title="SpookyJam" description="SpookyJam is an annual mod jam held in celebration of the fall season!" displayTitle = {false}>
+    <img class="mx-auto w-3/4" src="./hero_image.png"/>
+    <p class="text-center">
+        SpookyJam is an annual Minecraft mod jam held in celebration of the fall season! We invite modders of all skill
+        levels to join us in creating mods that are spooky, mysterious, or fit with the vibes of autumn. Our goal is to
+        foster a sense of community and encourage everyone to push their creative limits!
     </p>
 
-    <h2 id="next-event">SpookyJam 2024</h2>
-    <p>
-        The next SpookyJam event will begin on October 1st! We look forward to celebrating with the community and hope
-        you will join us! You can learn more about the event <a href="/events/2024">here</a>. We also recommend joining
-        the <a href={DISCORD}>Discord</a> server to keep up with the latest news and conversations surrounding the event
-        .
-    </p>
-    <Timer date={Date.UTC(2024, 9, 1, 0, 0, 0) - (12 * 60 * 60 * 1000)}>
-        <p>
-            SpookyJam 2024 has officially started! You may now start working on your submissions. You will have until
-            the end of October to submit your entry. We recommend submitting your entry as soon as possible so players
-            can have time to enjoy your mods.
-        </p>
+    <div class="grid gap-10 md:grid-cols-2 w-10/12 my-16 mx-auto">
+        <SimpleCard title="Celebrate the Season" icon="🎃" summary="Embrace the spirit of fall with fellow creators in a community full of chills, thrills, and creativity."/>
+        <SimpleCard title="Win Unique Prizes" icon="🍬" summary="Earn unique and exclusive rewards for showing off your spooky skills!"/>
+        <SimpleCard title="Make New Friends" icon="👻" summary="Connect with modders, artists, and players who share your love for the strange and eerie!"/>
+        <SimpleCard title="Level Up" icon="👾" summary="Improve your coding, art, and design skills in a supportive and festive environment!"/>
+        <div class="col-span-2 justify-self-center" >
+            <SimpleCard title="Play" icon="🎭" summary="Download the modpack and check out the public server!"/>
+        </div>
+    </div>
+
+    <h2 class="text-center" id="next-event">SpookyJam 2025</h2>
+    <Timer date={Date.UTC(2025, 9, 1, 0, 0, 0) - (12 * 60 * 60 * 1000)}>
+        <div slot="before">
+            <p class="text-center">
+                SpookyJam 2025 will begin on October 1st! We look forward to celebrating with the community and hope you will
+                join us!
+            </p>
+            <p class="text-center">
+                You can learn more about the event <a href="/events/2025">here</a>.
+            </p>
+        </div>
+        <div slot="after">
+            <p class="text-center">
+                SpookyJam 2025 has officially started! You may now start working on your submissions. You will have until
+                the end of October to submit your entry. We recommend submitting your entry as soon as possible so players
+                have time to enjoy your mod throughout the month.
+            </p>
+            <img class="mx-auto my-8" width="64" src="/ghost_logo.png" alt="Lumina, the mascot of SpookyJam!"/>
+        </div>
     </Timer>
 </Layout>
