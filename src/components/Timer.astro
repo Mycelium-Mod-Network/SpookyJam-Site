@@ -16,32 +16,34 @@ interface RenderProps {
 const { date, refreshRate = 1000} = Astro.props;
 ---
 
-<div>
-    <div class="countdown inline-flex justify-center text-center pr-4 gap-x-4 sm:gap-x-8">
+<div class="mx-auto">
+    <div class="countdown">
+        <slot name="before"/>
+        <div class="w-full lg:w-1/2 mx-auto place-content-center flex">
+            <div class="inline-block mx-4 text-center">
+                <p class="text-2xl lg:text-5xl days">0</p>
+                <p class='font-bold'>Days</p>
+            </div>
 
-        <div class="my-auto">
-            <p class="text-2xl lg:text-5xl days">0</p>
-            <p class='font-bold'>Days</p>
-        </div>
-    
-        <div class="my-auto">
-            <p class="text-2xl lg:text-5xl hours">0</p>
-            <p class='font-bold'>Hours</p>
-        </div>
-    
-        <div class="my-auto">
-            <p class="text-2xl lg:text-5xl minutes">0</p>
-            <p class='font-bold'>Minutes</p>
-        </div>
-    
-        <div class="my-auto">
-            <p class="text-2xl lg:text-5xl seconds">0</p>
-            <p class='font-bold'>Seconds</p>
+            <div class="inline-block mx-4 text-center">
+                <p class="text-2xl lg:text-5xl hours">0</p>
+                <p class='font-bold'>Hours</p>
+            </div>
+
+            <div class="inline-block mx-4 text-center">
+                <p class="text-2xl lg:text-5xl minutes">0</p>
+                <p class='font-bold'>Minutes</p>
+            </div>
+
+            <div class="inline-block mx-4 text-center">
+                <p class="text-2xl lg:text-5xl seconds">0</p>
+                <p class='font-bold'>Seconds</p>
+            </div>
         </div>
     </div>
 
     <div class='hidden completed'>
-        <slot/>
+        <slot name="after"/>
     </div>
 </div>
 
