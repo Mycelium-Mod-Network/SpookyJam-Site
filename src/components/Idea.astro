@@ -6,11 +6,6 @@ export interface Props {
     suggester: string
 }
 
-function formatString(input: string, maxLength: number): string {
-    console.log(input.padEnd(200, " ").length);
-    return input.length < maxLength ? input.padEnd(maxLength, " ") : input.length > maxLength ? input.slice(0, maxLength - 3) + "..." : input;
-}
-
 const {slug, title, summary, suggester, ...props} = Astro.props as Props;
 ---
 
