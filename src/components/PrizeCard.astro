@@ -1,0 +1,10 @@
+---
+const {icon, title, subtitle, description, amount} = Astro.props;
+---
+
+<div class="flex flex-col p-4 rounded-2xl bg-gray-800 shadow-2xl border-2 border-amber-700 text-center">
+    <div class="text-5xl mt-4 mb-2">{icon}</div>
+    <p class="text-2xl font-semibold mb-0 text-orange-300">{title}</p>
+    <p class="mt-1 text-sm text-gray-400">{subtitle}</p>
+    <p class="text-gray-300 text-lg mb-2">{description}</p>
+</div>
