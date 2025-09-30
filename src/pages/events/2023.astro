@@ -4,8 +4,12 @@ import InfoBox from "../../components/InfoBox.astro";
 import SubmissionBox from "../../components/SubmissionBox.astro";
 import Sponsor from "../../components/Sponsor.astro";
 import { DISCORD } from "../../config";
-import Timer from "../../components/Timer.astro";
 import ArchiveNotice from "../../components/ArchiveNotice.astro";
+
+import {fetchMod} from "../../util/curseforge.js";
+import {PACK_2023} from "../../config.js";
+import ModCard from "../../components/ModCard.astro";
+const modpackInfo = await fetchMod(PACK_2023)
 
 const SINYTRA = "https://www.curseforge.com/minecraft/mc-mods/sinytra-connector"
 const MULTILOADER = "https://github.com/jaredlll08/MultiLoader-Template"
@@ -115,6 +119,10 @@ const MULTILOADER = "https://github.com/jaredlll08/MultiLoader-Template"
         Each year we put together a modpack that showcases mods participating in the event. We also host a public server
         for players to explore these mods together! You can download the modpack <a href={"https://www.curseforge.com/minecraft/modpacks/spookyjam-2023"} target="_blank">here</a>.
     </p>
+
+    <div class="mx-auto my-8 lg:w-5/6">
+        <ModCard project={modpackInfo} shouldTrim={false}/>
+    </div>
 
     <h2 id="entries">Entries</h2>
     <SubmissionBox year="2023" />

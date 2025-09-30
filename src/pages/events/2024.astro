@@ -3,9 +3,12 @@ import Layout from "../../layouts/main.astro";
 import InfoBox from "../../components/InfoBox.astro";
 import SubmissionBox from "../../components/SubmissionBox.astro";
 import Sponsor from "../../components/Sponsor.astro";
-import {DISCORD} from "../../config";
-import Timer from "../../components/Timer.astro";
+import {DISCORD, PACK_2024} from "../../config";
 import ArchiveNotice from "../../components/ArchiveNotice.astro";
+
+import {fetchMod} from "../../util/curseforge.js";
+import ModCard from "../../components/ModCard.astro";
+const modpackInfo = await fetchMod(PACK_2024)
 
 const MULTILOADER = "https://github.com/jaredlll08/MultiLoader-Template"
 ---
@@ -95,11 +98,9 @@ const MULTILOADER = "https://github.com/jaredlll08/MultiLoader-Template"
         to explore these mods together! You can download the modpack <a href={"https://www.curseforge.com/minecraft/modpacks/spookyjam-2024"} target="_blank">here</a>.
     </p>
 
-    <p>
-        Please keep in mind that our server and modpack will be using Minecraft <strong>1.21.1</strong> and the
-        <strong>NeoForge</strong> mod loader. Any submissions that are not compatible with this environment will be
-        excluded from the pack and server, but will still be eligible for the broader event.
-    </p>
+    <div class="mx-auto my-8 lg:w-5/6">
+        <ModCard project={modpackInfo} shouldTrim={false}/>
+    </div>
 
     <h2 id="entries">Entries</h2>
     <SubmissionBox year="2024" />

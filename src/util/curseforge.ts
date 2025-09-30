@@ -34,7 +34,6 @@ descriptionOverrides.set(279120, "Adds new Skeletal mobs and other scary feature
 descriptionOverrides.set(929025, "A spooky Voodoo-themed mod.")
 
 export async function fetchMod(projectId: number): Promise<Submission> {
-    1
     if (PROJECT_CACHE.has(projectId)) {
         return PROJECT_CACHE.get(projectId) as Promise<Submission>
     }

@@ -2,6 +2,11 @@
 import Layout from "../../layouts/main.astro";
 import SubmissionBox from "../../components/SubmissionBox.astro";
 import ArchiveNotice from "../../components/ArchiveNotice.astro";
+
+import {fetchMod} from "../../util/curseforge.js";
+import {PACK_2018} from "../../config.js";
+import ModCard from "../../components/ModCard.astro";
+const modpackInfo = await fetchMod(PACK_2018)
 ---
 
 <Layout
@@ -108,4 +113,8 @@ import ArchiveNotice from "../../components/ArchiveNotice.astro";
             target="_blank">CurseForge</a
         >.
     </p>
+
+    <div class="mx-auto my-8 lg:w-5/6">
+        <ModCard project={modpackInfo} shouldTrim={false}/>
+    </div>
 </Layout>

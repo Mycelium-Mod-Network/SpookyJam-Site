@@ -4,6 +4,12 @@ import SubmissionBox from "../../components/SubmissionBox.astro";
 import InfoBox from "../../components/InfoBox.astro";
 import Sponsor from "../../components/Sponsor.astro";
 import ArchiveNotice from "../../components/ArchiveNotice.astro";
+
+import {fetchMod} from "../../util/curseforge.js";
+import {PACK_2021_FORGE, PACK_2021_FABRIC} from "../../config.js";
+import ModCard from "../../components/ModCard.astro";
+const modpackInfo = await fetchMod(PACK_2021_FORGE)
+const modpackInfo2 = await fetchMod(PACK_2021_FABRIC)
 ---
 
 <Layout
@@ -153,6 +159,13 @@ import ArchiveNotice from "../../components/ArchiveNotice.astro";
             target="_blank">Fabric</a
         >.
     </p>
+
+    <div class="mx-auto my-8 lg:w-5/6">
+        <ModCard project={modpackInfo} shouldTrim={false}/>
+    </div>
+    <div class="mx-auto my-8 lg:w-5/6">
+        <ModCard project={modpackInfo2} shouldTrim={false}/>
+    </div>
 
     <h2>FaQ</h2>
     <InfoBox title="Can I submit multiple mods to this event?">
