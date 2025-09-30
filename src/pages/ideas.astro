@@ -12,7 +12,7 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-//shuffle(ideas)
+shuffle(ideas)
 ---
 
 <Layout title="Mod Ideas" description="Ideas and inspirations to help you make your SpookyJam mods!">
@@ -24,7 +24,7 @@ function shuffle(array) {
     </p>
 
     <div class="grid place-content-center my-12">
-        <RandomizeButton id="random-idea" label="🎃Im Feeling Spooky👻" paths={Array.from(IDEAS.keys())}/>
+        <RandomizeButton id="random-idea" label="🎃Im Feeling Spooky👻" base="/ideas/" paths={Array.from(IDEAS.keys())}/>
     </div>
 
     <p class="text-center">

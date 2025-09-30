@@ -29,6 +29,6 @@ const bodyText = await renderMarkdown(idea.body)
         }
     </div>
     <div class="grid place-content-center mt-20">
-        <RandomizeButton id="random-idea" label="Another Idea!" current={idea.slug} paths={Array.from(IDEAS.keys())}/>
+        <RandomizeButton id="random-idea" label="Another Idea!" current={idea.slug} base="/ideas/" paths={Array.from(IDEAS.keys())}/>
     </div>
 </Layout>
