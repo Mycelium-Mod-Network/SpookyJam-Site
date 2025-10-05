@@ -5,7 +5,8 @@ import {DISCORD} from "../config";
 import Timer from "../components/Timer.astro";
 ---
 
-<Layout title="Events" description="A list of all past and current SpookyJam events!">
+<Layout title="Events" description="A list of all past and current SpookyJam events!" displayTitle = {false}>
+    <img class="mx-auto mb-8 max-h-[6rem]" src="./titles/events.png" alt="Events Logo"/>
     <div class="flex items-center justify-center w-full mt-16">
         <div class="w-3/4">
             <PreviousEventCard event="2025" left="Who" center="Was" right="Phone?" title={false}/>

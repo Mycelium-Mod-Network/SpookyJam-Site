@@ -16,7 +16,8 @@ submissions.forEach((project) => project.members.forEach((author) => allAuthors.
 const sum = submissions.reduce((downloads, project) => downloads + project.downloads, 0);
 ---
 
-<Layout title="Submissions" description="A list of all projects that have participated in SpookyJam!">
+<Layout title="Submissions" description="A list of all projects that have participated in SpookyJam!" displayTitle = {false}>
+    <img class="mx-auto mb-8 max-h-[6rem]" src="./titles/submissions.png" alt="Submissions Logo"/>
     <p>
         Over the years we have received many submissions from the talented members of our community! So far we have
         received <strong>{submissions.length}</strong> submissions and have had <strong>{allAuthors.size}</strong>

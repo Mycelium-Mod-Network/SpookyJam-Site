@@ -10,7 +10,8 @@ const submissions = await fetchMods(submissionIds)
 submissions.sort((a, b) => new Date(b.created_at).valueOf() - new Date(a.created_at).valueOf());
 ---
 
-<Layout title="Modpacks" description="A list of every SpookyJam modpack!">
+<Layout title="Modpacks" description="A list of every SpookyJam modpack!" displayTitle = {false}>
+    <img class="mx-auto mb-8 max-h-[6rem]" src="./titles/modpacks.png" alt="Modpacks Logo"/>
     <p>
         Over the years, SpookyJam has brought together the community to create some truly memorable modpacks. Each one
         captures a different slice of creativity! Each pack offers strange worlds to explore, eerie creatures, and
