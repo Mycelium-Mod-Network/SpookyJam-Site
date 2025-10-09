@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.4",
+    "@astrojs/mdx": "^4.3.6",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.13.5",
+    "astro": "^5.14.1",
     "autoprefixer": "^10.4.7",
     "canvas-confetti": "^1.9.3",
     "compare-versions": "^6.1.1",

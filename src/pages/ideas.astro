@@ -6,7 +6,7 @@ import {IDEAS} from "../config"
 import RandomizeButton from "../components/RandomizeButton.astro";
 
 const ideas = Array.from(IDEAS.values());
-function shuffle(array) {
+function shuffle(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -15,8 +15,8 @@ function shuffle(array) {
 shuffle(ideas)
 ---
 
-<Layout title="Mod Ideas" description="Ideas and inspirations to help you make your SpookyJam mods!">
-
+<Layout title="Mod Ideas" description="Ideas and inspirations to help you make your SpookyJam mods!" displayTitle = {false}>
+    <img class="mx-auto mb-8 max-h-[6rem]" src="./titles/mod-ideas.png" alt="Mod Ideas Logo"/>
     <p>
         Are you having issues coming up with an idea for SpookyJam? Don't worry, this type of thing happens to everyone
         from time to time. The following list of ideas has been put together by our community to help inspire you! You
@@ -33,7 +33,7 @@ shuffle(ideas)
 
     <div class="lg:grid lg:grid-cols-3 lg:gap-2 mt-8">
         {
-            ideas.map(idea => <Idea slug={idea.slug} title={idea.title} summary={idea.summary} suggester={idea.suggester}/>)
+            ideas.map(idea => <Idea slug={idea.slug!} title={idea.title} summary={idea.summary} suggester={idea.suggester}/>)
         }
     </div>
 </Layout>

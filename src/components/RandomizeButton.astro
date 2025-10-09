@@ -2,8 +2,8 @@
 export interface Props {
     id: string,
     label: string,
-    current: string,
-    base_path: string,
+    current?: string,
+    base?: string,
     paths: string[]
 }
 
@@ -12,7 +12,7 @@ const { id, label, current, base = "./", paths} = Astro.props
 
 <button class={`${id} px-3 py-2 border-2 rounded-xl border-yellow-800 bg-yellow-900 bg-opacity-75 hover:text-yellow-600 hover:bg-opacity-50 text-xl font-bold`}>{label}</button>
 
-<script client:load define:vars={{id, current, base, paths}}>
+<script define:vars={{id, current, base, paths}}>
     document.querySelectorAll("button." + id).forEach((button) => button.addEventListener('click', () => {
         let path = paths[Math.floor(Math.random() * paths.length)]
         while (path === current) {
