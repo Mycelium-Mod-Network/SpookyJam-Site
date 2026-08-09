@@ -22,7 +22,7 @@ const bodyText = await renderMarkdown(idea.body)
             idea.tags.map((idea) =>
                     <div>
                         <a class="text-white" href={`/ideas/tag/${idea}`}>
-                            <p class="mr-2 px-1 text-sm border-2 rounded-lg border-yellow-800 bg-yellow-900 bg-opacity-75 hover:text-yellow-600 hover:bg-opacity-50">{capitalize(idea)}</p>
+                            <p class="mr-2 px-1 text-sm border-2 rounded-lg border-yellow-800 bg-yellow-900/75 hover:text-yellow-600 hover:bg-yellow-900/50">{capitalize(idea)}</p>
                         </a>
                     </div>
             )

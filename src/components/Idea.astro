@@ -9,7 +9,7 @@ export interface Props {
 const {slug, title, summary, suggester, ...props} = Astro.props as Props;
 ---
 
-<a href={`/ideas/${slug}`} class="flex flex-col justify-between p-4 pb-0 my-1 border-2 rounded-2xl border-yellow-700 bg-yellow-900 bg-opacity-25 lg:transition-transform lg:ease-in-out lg:hover:scale-105">
+<a href={`/ideas/${slug}`} class="flex flex-col justify-between p-4 pb-0 my-1 border-2 rounded-2xl border-yellow-700 bg-yellow-900/25 lg:transition-transform lg:ease-in-out lg:hover:scale-105">
     <div>
         <strong class="text-lg font-bold">{title}</strong>
         <p class="text-base text-gray-300">{summary}</p>

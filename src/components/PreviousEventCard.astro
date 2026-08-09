@@ -6,7 +6,7 @@ const {event, left, center, right, title = true} = Astro.props;
 
 <div>
     {title &&
-            <div class="w-full border-2 border-yellow-800 p-1 bg-yellow-900 bg-opacity-25">
+            <div class="w-full border-2 border-yellow-800 p-1 bg-yellow-900/25">
                 <a href=`/events/${event}` target="_self" class="text-white">
                     {event}
                 </a>
