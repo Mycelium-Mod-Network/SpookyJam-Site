@@ -43,12 +43,7 @@ export async function fetchMod(projectId: number): Promise<Submission> {
 }
 
 export async function fetchMods(projectIds: number[]): Promise<Submission[]> {
-    const requests: Array<Submission> = [];
-    for (const project of projectIds) {
-        await delay()
-        requests.push(await fetchMod(project));
-    }
-    return Promise.all(requests);
+    return Promise.all(projectIds.map(project => fetchMod(project)));
 }
 
 async function fetchRecursive(projectId: number): Promise<Submission> {
