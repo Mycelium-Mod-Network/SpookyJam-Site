@@ -3,14 +3,18 @@ import Layout from "../../layouts/main.astro";
 import InfoBox from "../../components/InfoBox.astro";
 import SubmissionBox from "../../components/SubmissionBox.astro";
 import Sponsor from "../../components/Sponsor.astro";
-import {DISCORD} from "../../config";
-import Timer from "../../components/Timer.astro";
+import {DISCORD, PACK_2024, PACK_2025} from "../../config";
 import ArchiveNotice from "../../components/ArchiveNotice.astro";
 import PrizeCard from "../../components/PrizeCard.astro"
+import ModCard from "../../components/ModCard.astro";
+import {fetchMod} from "../../util/curseforge.ts";
+const modpackInfo = await fetchMod(PACK_2024)
 ---
 
 <Layout title="SpookyJam 2025"
         description="Celebrate the fall season with the modded Minecraft community! SpookyJam 2025 will be taking place October 1st to October 31st!">
+
+    <ArchiveNotice/>
 
     <p>
         There's a chill in the air, the leaves are turning, and the shadows stretch just a little too long... You know
@@ -86,17 +90,17 @@ import PrizeCard from "../../components/PrizeCard.astro"
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-6 my-6">
         <PrizeCard icon="👑" title="Haunted Crown" subtitle="Best Overall"
-                   description="The mod that impressed us the most with a great concept and execution." amount="$25"/>
+                   description="The mod that impressed us the most with a great concept and execution." amount="$25" winner={{name:"Dooter Amigos", url:"https://www.curseforge.com/minecraft/mc-mods/dooter-amigos"}}/>
         <PrizeCard icon="🍂" title="Autumn Vibes" subtitle="Best Atmosphere"
-                   description="The mod that nailed the mood and ambience, perfectly capturing the vibe." amount="$25"/>
+                   description="The mod that nailed the mood and ambience, perfectly capturing the vibe." amount="$25" winner={{name:"Fall Foraging", url:"https://www.curseforge.com/minecraft/mc-mods/fall-foraging"}}/>
         <PrizeCard icon="👻" title="Chill Factor" subtitle="Most Creepy"
-                   description="The mod that brought something creepy and sent chills down our spines." amount="$25"/>
+                   description="The mod that brought something creepy and sent chills down our spines." amount="$25" winner={{name:"Yamamura Sadako", url:"https://www.curseforge.com/minecraft/mc-mods/yamamura-sadako"}}/>
         <PrizeCard icon="🩸" title="New Blood" subtitle="Best First-Timer"
-                   description="The newcomer who delivered a confident and creative first submission." amount="$25"/>
+                   description="The newcomer who delivered a confident and creative first submission." amount="$25" winner={{name:"Hallow Costumes", url:"https://www.curseforge.com/minecraft/mc-mods/hallow-costumes"}}/>
         <PrizeCard icon="🪦" title="Legacy" subtitle="Best Update"
-                   description="The previous submission that has undergone an impressive transformation." amount="$25"/>
+                   description="The previous submission that has undergone an impressive transformation." amount="$25" winner={{name:"Impillagers", url:"https://www.curseforge.com/minecraft/mc-mods/impillagers"}}/>
         <PrizeCard icon="🔮" title="Coven Crafter" subtitle="Collaboration Award"
-                   description="The participant that embodied the spirit of collaboration." amount="$25"/>
+                   description="The participant that embodied the spirit of collaboration." amount="$25" winner={{name:"Up", url:"https://upcraft.dev/"}}/>
     </div>
 
     <p>
@@ -108,13 +112,14 @@ import PrizeCard from "../../components/PrizeCard.astro"
     <h2 id="modpack-server">Modpack & Server</h2>
     <p>
         Each year we put together a modpack that showcases participating mods. We also host a public server for players
-        to explore these mods together! Check back <strong>October 17th</strong> for more info!
+        to explore these mods together! You can download the modpack <a href={"https://www.curseforge.com/minecraft/modpacks/spookyjam-2025"} target="_blank">here</a>.
     </p>
+    <div class="mx-auto my-8 lg:w-5/6">
+        <ModCard project={modpackInfo} shouldTrim={false}/>
+    </div>
 
     <h2 id="entries">Entries</h2>
-    Submissions will show up here as they are submitted! New entries can be submitted <a target="_blank"
-                                                                                         rel="noreferrer"
-                                                                                         href="https://forms.gle/GJH48bU9cyXaRepm8">here</a>.
+
     <SubmissionBox year="2025" />
 
     <h2 id="faq">FaQ</h2>
