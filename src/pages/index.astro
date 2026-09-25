@@ -13,6 +13,27 @@ import SimpleCard from "../components/SimpleCard.astro"
         foster a sense of community and encourage everyone to push their creative limits!
     </p>
 
+    <h2 class="text-center" id="next-event">SpookyJam 2026</h2>
+    <Timer date={Date.UTC(2026, 8, 26, 0, 0, 0)}>
+        <div slot="before">
+            <p class="text-center">
+                SpookyJam 2026 will begin on September 18th! We look forward to celebrating with the community and hope
+                you will join us!
+            </p>
+            <p class="text-center">
+                You can learn more about the event <a href="/events/2026">here</a>.
+            </p>
+        </div>
+        <div slot="after">
+            <p class="text-center">
+                SpookyJam 2026 has officially started! You may now start working on your entries! You will have until
+                October 25th to submit your entry. We recommend submitting your entry as soon as possible so players
+                have time to enjoy your mod throughout the month!
+            </p>
+            <img class="mx-auto my-8" width="64" src="/ghost_logo.png" alt="Lumina, the mascot of SpookyJam!"/>
+        </div>
+    </Timer>
+    
     <div class="grid gap-10 md:grid-cols-2 w-10/12 my-16 mx-auto">
         <SimpleCard title="Celebrate the Season" icon="🎃" summary="Embrace the spirit of fall with fellow creators in a community full of chills, thrills, and creativity."/>
         <SimpleCard title="Win Unique Prizes" icon="🍬" summary="Earn unique and exclusive rewards for showing off your spooky skills!"/>
@@ -22,25 +43,4 @@ import SimpleCard from "../components/SimpleCard.astro"
             <SimpleCard title="Play" icon="🎭" summary="Download the modpack and check out the public server!"/>
         </div>
     </div>
-
-    <h2 class="text-center" id="next-event">SpookyJam 2025</h2>
-    <Timer date={Date.UTC(2025, 9, 1, 0, 0, 0) - (12 * 60 * 60 * 1000)}>
-        <div slot="before">
-            <p class="text-center">
-                SpookyJam 2025 will begin on October 1st! We look forward to celebrating with the community and hope you will
-                join us!
-            </p>
-            <p class="text-center">
-                You can learn more about the event <a href="/events/2025">here</a>.
-            </p>
-        </div>
-        <div slot="after">
-            <p class="text-center">
-                SpookyJam 2025 has officially started! You may now start working on your submissions. You will have until
-                the end of October to submit your entry. We recommend submitting your entry as soon as possible so players
-                have time to enjoy your mod throughout the month.
-            </p>
-            <img class="mx-auto my-8" width="64" src="/ghost_logo.png" alt="Lumina, the mascot of SpookyJam!"/>
-        </div>
-    </Timer>
 </Layout>
