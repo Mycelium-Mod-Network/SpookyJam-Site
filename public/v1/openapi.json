@@ -1,0 +1,239 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SpookyJam API",
+    "version": "1.0.1",
+    "description": "Public API for SpookyJam modding event statistics, participants, and project submissions."
+  },
+  "servers": [
+    {
+      "url": "https://spooky-jam.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/v1/submissions.json": {
+      "get": {
+        "summary": "Get all submissions grouped by year",
+        "description": "Returns a map of mod submissions received across all SpookyJam event years. The keys are the event years and values are arrays of submission objects.",
+        "operationId": "getSubmissions",
+        "responses": {
+          "200": {
+            "description": "A map of event years to an array of submission objects.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Submission"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/submissions/{year}.json": {
+      "get": {
+        "summary": "Get submissions for a specific year",
+        "description": "Returns an array of submissions that were received for the specified SpookyJam event year.",
+        "operationId": "getSubmissionsByYear",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "description": "The event year to retrieve submissions for (e.g. 2026, 2025).",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An object containing the array of submissions for the specified year.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "submissions"
+                  ],
+                  "properties": {
+                    "submissions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Submission"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/stats.json": {
+      "get": {
+        "summary": "Get yearly event statistics",
+        "description": "Returns a map of statistics for each SpookyJam event year, including submission count, unique participants, and total downloads.",
+        "operationId": "getStats",
+        "responses": {
+          "200": {
+            "description": "A map of event years to a StatsJson object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/StatsJson"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/openapi.json": {
+      "get": {
+        "summary": "Get OpenAPI specification",
+        "description": "Returns the OpenAPI 3.1.0 specification for the SpookyJam API.",
+        "operationId": "getOpenApiSpec",
+        "responses": {
+          "200": {
+            "description": "The OpenAPI specification document.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Submission": {
+        "type": "object",
+        "description": "A SpookyJam mod submission project.",
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "url",
+          "logo",
+          "created_at",
+          "downloads",
+          "members",
+          "loaders",
+          "versions"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "A unique ID for the project on CurseForge.",
+            "example": 920504
+          },
+          "title": {
+            "type": "string",
+            "description": "The display name of the project.",
+            "example": "Cannibal Conundrum"
+          },
+          "summary": {
+            "type": "string",
+            "description": "A short description of the project.",
+            "example": "A magic mod revolving around witchery, autumn and the moon!"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URL that points to the project on CurseForge.",
+            "example": "https://www.curseforge.com/minecraft/mc-mods/cannibal-conundrum"
+          },
+          "logo": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URL that points to the project logo on CurseForge."
+          },
+          "created_at": {
+            "type": "string",
+            "description": "A timestamp of when the CurseForge project was created."
+          },
+          "downloads": {
+            "type": "integer",
+            "description": "The amount of downloads the project has received on CurseForge.",
+            "example": 12500
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Usernames of the authors on CurseForge.",
+            "example": [
+              "DarkhaxDev"
+            ]
+          },
+          "loaders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of supported mod loaders (e.g. Fabric, Forge, NeoForge, Quilt).",
+            "example": [
+              "Fabric",
+              "Forge"
+            ]
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of supported Minecraft versions.",
+            "example": [
+              "1.20.1",
+              "1.21.1"
+            ]
+          }
+        }
+      },
+      "StatsJson": {
+        "type": "object",
+        "description": "Aggregated statistics for a SpookyJam event year.",
+        "required": [
+          "submissions",
+          "participants",
+          "downloads"
+        ],
+        "properties": {
+          "submissions": {
+            "type": "integer",
+            "description": "The number of unique submissions received.",
+            "example": 18
+          },
+          "participants": {
+            "type": "integer",
+            "description": "The number of unique participants.",
+            "example": 24
+          },
+          "downloads": {
+            "type": "integer",
+            "description": "The sum of downloads all submissions received.",
+            "example": 145000
+          }
+        }
+      }
+    }
+  }
+}

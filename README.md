@@ -45,3 +45,6 @@ Returns an array of submissions that were received for the specified year.
 
 #### `/v1/stats.json`
 Returns a map of stats for each year. The key is the name of the year and the value is a StatsJson object.
+
+#### `/v1/openapi.json`
+Returns the OpenAPI specification (v3.1) for the SpookyJam API, allowing compatible tools and clients to generate typesafe SDKs and client interfaces.
