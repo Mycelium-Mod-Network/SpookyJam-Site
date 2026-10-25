@@ -5,6 +5,7 @@ import InfoBox from "../../components/InfoBox.astro";
 import Sponsor from "../../components/Sponsor.astro";
 import {DISCORD} from "../../config";
 import PrizeCard from "../../components/PrizeCard.astro";
+import SubmissionBox from "../../components/SubmissionBox.astro";
 ---
 
 <Layout title="SpookyJam 2026" description="Celebrate 10 years of SpookyJam with the Minecraft community! SpookyJam 2026 will be taking place September 26th to October 28th!" image="thumbnails/2026.png">
@@ -147,6 +148,13 @@ import PrizeCard from "../../components/PrizeCard.astro";
             </li>
         </ol>
     </div>
+
+    <h2 id="entries">Entries</h2>
+
+    <p>
+        Participants can submit new entries using this <a href="https://forms.gle/BDhtqkKuv2Vksnx26" target="_blank">form</a>!
+    </p>
+    <SubmissionBox year="2026" />
 
     <h2 id="faq">FaQ</h2>
 
