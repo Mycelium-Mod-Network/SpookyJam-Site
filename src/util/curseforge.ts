@@ -79,7 +79,7 @@ function fromProject(project: ProjectData): Submission {
         title: nameOverrides.get(project.id) ?? project.title,
         summary: descriptionOverrides.get(project.id) ?? project.summary,
         url: project.urls.curseforge,
-        logo: project.thumbnail,
+        logo: project.id === 1733926 ? "https://media.forgecdn.net/avatars/2132/607/639280267612308720.webp" : project.thumbnail,
         created_at: project.created_at,
         downloads: project.downloads.total,
         members: project.members.map(m => m.username),
